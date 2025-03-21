@@ -6,13 +6,17 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script>
+
+        colors=["red", "blue", "orange", "purple", "white"]
+        let currentIndex= 0;
+
         function changeBg(){
-            const change = document.getElementById('container');change.style.backgroundColor = 'black';
+            const change= document.getElementById('container');change.style.backgroundColor = colors[currentIndex]; currentIndex = (currentIndex + 1) % colors.length;
         }
     </script>
 </head>
-<body class="bg-yellow-300 p-4" id="container">
-    <div class="cont rounded-3xl bg-white h-fit shadow-2xl border-r-8 border-b-8 border-t-[1px] border-l-[1px] p-7 ">
+<body class="bg-yellow-300 p-4">
+    <div class="cont rounded-3xl bg-white h-fit shadow-2xl border-r-8 border-b-8 border-t-[1px] border-l-[1px] p-7" id="container">
         <img src="images/illustration-article.svg" alt="" srcset="" class="w-screen  max-h-96 rounded-2xl ">
         <div class="learn bg-yellow-300 w-fit py-2 px-5 font-bold mt-5 rounded-lg text-xl tablet:justify-center">
             Learning
